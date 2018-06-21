@@ -1,5 +1,11 @@
 Tap-Hero-Adventures
 
+Version 0.0.3
+
+    -Changed the main layout of the game. 
+
+
+
 Version 0.0.2
 
     -Added Zone
