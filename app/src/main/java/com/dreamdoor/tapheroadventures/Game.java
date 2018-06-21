@@ -9,13 +9,16 @@ import android.widget.TextView;
 
 public class Game extends AppCompatActivity {
 
-    TextView tv_time, tv_clicks;
+    TextView tv_time, tv_clicks, tv_zone;
     Button b_click, b_start;
 
     CountDownTimer timer;
     int time = 30;
 
     int clicks = 0;
+
+    int zoneM = 1;
+    int zoneB = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -24,8 +27,13 @@ public class Game extends AppCompatActivity {
 
         tv_time = (TextView) findViewById(R.id.tv_time);
         tv_clicks = (TextView) findViewById(R.id.tv_clicks);
+        tv_zone = (TextView) findViewById(R.id.tv_zone);
         b_click = (Button) findViewById(R.id.b_click);
         b_start = (Button) findViewById(R.id.b_start);
+
+        // Start at zone 1 of world 1
+
+        tv_zone.setText("Zone " + zoneM + '-' + zoneB);
 
         b_start.setEnabled(true);
         b_click.setEnabled(false);
