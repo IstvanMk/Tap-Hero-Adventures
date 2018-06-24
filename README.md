@@ -1,5 +1,14 @@
 Tap-Hero-Adventures
 
+Alpha/Development Stage
+
+Version 0.0.5
+    
+    -Added Max Health to Mobs.
+    -Added Current Health to Mobs.
+    -Added Health Bar to Mobs.
+    -Added Text Indication of Health to Mobs.
+
 Version 0.0.4
     
     -Added enemies.

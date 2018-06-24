@@ -2,7 +2,7 @@ package com.dreamdoor.tapheroadventures;
 
 public class MobBuilder {
 
-    private String name;
+    String name;
     private int imageloc;
     private int health;
     private int maxHealth;
