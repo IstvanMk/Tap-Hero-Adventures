@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <array name="mob_images">
+        <item>@drawable/aerocephal</item>
+        <item>@drawable/arcana_drake</item>
+        <item>@drawable/aurumdrakueli</item>
+        <item>@drawable/bat</item>
+        <item>@drawable/daemarbora</item>
+        <item>@drawable/deceleon</item>
+        <item>@drawable/demonic_essence</item>
+        <item>@drawable/dune_crawler</item>
+        <item>@drawable/green_slime</item>
+        <item>@drawable/nagaruda</item>
+        <item>@drawable/rat</item>
+        <item>@drawable/scorpion</item>
+        <item>@drawable/skeleton</item>
+        <item>@drawable/snake</item>
+        <item>@drawable/spider</item>
+        <item>@drawable/stygian_lizard</item>
+    </array>
+</resources>
