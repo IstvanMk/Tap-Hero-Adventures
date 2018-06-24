@@ -11,7 +11,7 @@ import java.util.Random;
 
 public class Game extends AppCompatActivity {
 
-    TextView tv_time, tv_zone, tv_gold, tv_mobName, tv_health;
+    TextView tv_time, tv_zone, tv_gold, tv_mobName, tv_health,tv_zoneName;
     ProgressBar  progressBar;
     ImageButton imageButton;
 
@@ -58,6 +58,7 @@ public class Game extends AppCompatActivity {
 
         tv_time = (TextView) findViewById(R.id.tv_time);
         tv_zone = (TextView) findViewById(R.id.tv_zone);
+        tv_zoneName = (TextView) findViewById(R.id.tv_zoneName);
         tv_gold = (TextView) findViewById(R.id.tv_gold);
         tv_health = (TextView) findViewById(R.id.tv_health);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
@@ -74,8 +75,11 @@ public class Game extends AppCompatActivity {
         tv_gold.setText("Gold: " + gold);
 
         // Start at zone 1 of world 1
-        tv_zone.setText("Zone " + zoneM + '-' + zoneB);
-//        b_click.setEnabled(false);
+        tv_zone.setText("Zone " + zoneB + '-' + zoneM);
+
+        //temp place for zoneName, will be moved into an object
+
+        tv_zoneName.setText("Newbie Woods");
 
         timer = new CountDownTimer(30000, 1000) {
             @Override
@@ -101,6 +105,15 @@ public class Game extends AppCompatActivity {
                 double  progress = ((double)(mobArray[randomIndex].getHealth()*10) / mobArray[randomIndex].getMaxHealth()) * 10;
                 progressBar.setProgress((int)progress);
                 tv_health.setText("Health: " + mobArray[randomIndex].getHealth() + "/" +  mobArray[randomIndex].getMaxHealth());
+                if (zoneM < 10) {
+                    zoneM++;
+                    tv_zone.setText("Zone " + zoneB + '-' + zoneM);
+                }
+                else {
+                    zoneM = 1;
+                    zoneB++;
+                    tv_zone.setText("Zone " + zoneB + '-' + zoneM);
+                }
             }
         });
     }

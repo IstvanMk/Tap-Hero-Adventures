@@ -2,6 +2,12 @@ Tap-Hero-Adventures
 
 Alpha/Development Stage
 
+Version 0.0.6
+    
+    -Added Zones. Growth.
+    -Added Zone Name(Basic only 1 at the moment)
+
+
 Version 0.0.5
     
     -Added Max Health to Mobs.
