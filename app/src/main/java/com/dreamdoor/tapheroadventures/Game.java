@@ -20,6 +20,7 @@ public class Game extends AppCompatActivity {
     int zoneM = 1;
     int zoneB = 1;
     int gold = 0;
+    int damage = 1;
 
 
     //theMobs
@@ -98,13 +99,19 @@ public class Game extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 gold++;
+
+                //damage object
+
+
+
+
+
                 tv_gold.setText("Gold: " + gold);
                 int randomIndex = r.nextInt(mobArray.length);
                 imageButton.setImageResource(mobArray[randomIndex].getImageloc());
                 tv_mobName.setText(mobArray[randomIndex].getName());
                 double  progress = ((double)(mobArray[randomIndex].getHealth()*10) / mobArray[randomIndex].getMaxHealth()) * 10;
                 progressBar.setProgress((int)progress);
-                tv_health.setText("Health: " + mobArray[randomIndex].getHealth() + "/" +  mobArray[randomIndex].getMaxHealth());
                 if (zoneM < 10) {
                     zoneM++;
                     tv_zone.setText("Zone " + zoneB + '-' + zoneM);
